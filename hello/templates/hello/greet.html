@@ -2,10 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hello</title>
+    <title>Fancy Hello Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'hello/style.css' %}">
 </head>
 <body>
-    Hello, {{ name }}! {% if show_time %} It's {{ time }} {% endif %}
+    <h1 class="title">Welcome to Fancy Hello!</h1>
+    <p style="color: blue; font-size: 18px;">Greetings, {{ name }}! 🎉</p>
+    {% if show_time %}<p>Current time: {{ time }}</p>{% endif %}
 </body>
 </html>
 
